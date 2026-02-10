@@ -32,7 +32,7 @@ function setupFormSubmit() {
             });
             
             if (response.ok) {
-                showMessage('Habit added successfully!', 'success');
+                showMessage('✨ Habit added successfully!', 'success');
                 form.reset();
                 await loadHabits();
             } else {
@@ -138,7 +138,7 @@ async function markComplete(habitId) {
         });
         
         if (response.ok) {
-            showMessage('Habit marked as complete!', 'success');
+            showMessage('🎉 Great job! Habit completed today!', 'success');
             await loadHabits();
         } else {
             const error = await response.json();
